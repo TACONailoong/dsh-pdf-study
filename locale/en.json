@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "PDF study",
+    "description": "Read a PDF in the right Sidebar and ask about any region you drag a box around. Open it from the \"PDF study\" entry in the right Sidebar's add (+) guide, or from the \"PDF study\" pill under the composer; import a PDF, drag a box over a figure, formula, or paragraph, type a question, and press Enter. The cropped region is sent to your conversation as an image together with your question, so the answer arrives as a normal assistant answer and the crop stays in the session log. Pages are rasterized on the Host through the Office kit (PDFium) and cached; the first page of a large file takes a few seconds. The uploaded PDF is kept in Host memory only, capped at 64 MB and six documents, and is released when you replace it; reopening the tab returns to the same PDF. Requires the Web GUI, the Host Office kit, and a session model that accepts image input; with the plugin disabled the Sidebar page type and the composer pill disappear and nothing else changes."
+  }
+}
