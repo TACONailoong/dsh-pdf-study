@@ -2,6 +2,27 @@
 
 在 DeepSeek Harness 的右侧栏读 PDF，框选一块区域就直接提问。
 
+## 安装
+
+插件以 GitHub 仓库分发，装进某个 DSH profile（下面以 `web` 为例）：
+
+```bash
+cd ~/.dsh/profiles/web
+pnpm add github:TACONailoong/dsh-pdf-study
+```
+
+再把 `dsh-pdf-study` 加进同一份 `package.json` 的 `dsh.profile.bundles` 数组：
+
+```json
+"dsh": {
+  "profile": {
+    "bundles": ["@deepseek-ai/dsh-base", "@deepseek-ai/dsh-web-app", "dsh-pdf-study"]
+  }
+}
+```
+
+重启 DSH 后刷新浏览器页面，输入框下方就会出现「PDF 精读」按钮。
+
 ## 用法
 
 1. 打开右侧栏：对话页右上角的展开按钮，或输入框下方的「PDF 精读」按钮。
@@ -25,3 +46,7 @@
 - 单份 PDF 上限 64 MB，Host 内存最多同时保留 6 份（超出按最久未用淘汰）；更换文件时释放旧的一份，关闭标签页后重新打开仍回到同一份 PDF。
 - 大文件第一页需要几秒（渲染引擎首次启动）；相邻页会预取，翻页通常很快。
 - 依赖当前会话模型支持图片输入。
+
+## 许可
+
+MIT
